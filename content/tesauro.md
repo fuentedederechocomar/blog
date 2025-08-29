@@ -6,6 +6,6 @@ menu: "main"
 weight: 1
 ---
 
-# Explora nuestro índice de categorías y etiquetas
+# Explorá el índice de categorías y etiquetas
 
 Aquí encontrarás un listado completo de todos los temas tratados en el sitio.
