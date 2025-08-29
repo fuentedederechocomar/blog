@@ -3,35 +3,16 @@ title: "Tesauro del sitio"
 url: "/tesauro/"
 ---
 
-Encuentra aquí un índice completo del contenido de nuestro sitio, organizado por categorías, temas, y etiquetas.
+Encuentra aquí un índice completo del contenido de nuestro sitio, organizado por categorías y etiquetas.
 
 <p>
     Puedes usar este índice para encontrar el contenido que más te interesa, o simplemente para explorar los diferentes temas que cubrimos.
 </p>
 
-## Secciones
-
-Aquí podrías listar las secciones principales de tu sitio.
-
----
-
 ## Categorías
 
 <ul class="taxonomy-list">
-    {{ range .Site.Taxonomies.categories.ByCount }}
-    <li>
-        <a href="{{ .Page.Permalink }}">{{ .Term }}</a>
-        <span class="term-count">({{ .Count }})</span>
-    </li>
-    {{ end }}
-</ul>
-
----
-
-## Temas
-
-<ul class="taxonomy-list">
-    {{ range .Site.Taxonomies.topics.ByCount }}
+    {{ range .Site.Taxonomies.categoria.ByCount }}
     <li>
         <a href="{{ .Page.Permalink }}">{{ .Term }}</a>
         <span class="term-count">({{ .Count }})</span>
@@ -44,10 +25,10 @@ Aquí podrías listar las secciones principales de tu sitio.
 ## Etiquetas
 
 <ul class="taxonomy-list">
-    {{ range .Site.Taxonomies.tags.ByCount }}
+    {{ range .Site.Taxonomies.tag.ByCount }}
     <li>
         <a href="{{ .Page.Permalink }}">{{ .Term }}</a>
         <span class="term-count">({{ .Count }})</span>
     </li>
     {{ end }}
-</ul>
+</ul> 
