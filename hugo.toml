@@ -28,11 +28,17 @@ title = '§ Fuente de Derecho'
     name = "§ Novedades"
     url = "/novedades/"
     weight = 4
-  [[menu.main]]
-    identifier = "Etiquetas"
-    name = "Etiquetas"
-    pageRef = "tags"
-    weight = 5
+ # [[menu.main]]
+ #   identifier = "Etiquetas"
+ #   name = "Etiquetas"
+ #   pageRef = "tags"
+ #   weight = 5
+  [[menu.main]]             # Agregado por Tesauro en vez de etiquetas
+    identifier = "Tesauro"  # Agregado por Tesauro en vez de etieuqtas
+    name = "Tesauro"        # Agregado por Tesauro en vez de etiquetas
+    url = "/tesauro/"       # Agregado por Tesauro en vez de etiquetas
+    weight = 5              # Agregado por Tesauro en vez de etiquetas
+ 
 
 [params]
   description = "Tu descripción del sitio"
