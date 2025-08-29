@@ -1,7 +1,8 @@
 ---
 title: "Tesauro del sitio"
-layout: "terms"
---- 
+layout: "tesauro"
+url: "/tesauro/"
+---
 
 Encuentra aquí un índice completo del contenido de nuestro sitio, organizado por categorías y etiquetas.
 
