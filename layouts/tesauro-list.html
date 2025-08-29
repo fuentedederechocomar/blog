@@ -5,6 +5,11 @@
   </header>
 
   <div class="e-content">
+    <style>
+      .e-content ul {
+        margin-left: 1.5rem; /* Ajusta este valor para controlar la sangría */
+      }
+    </style>
     {{ .Content }}
 
     {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
@@ -24,4 +29,4 @@
     {{ end }}
   </div>
 </article>
-{{ end }}
+{{ end }} 
