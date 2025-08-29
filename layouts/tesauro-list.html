@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="h-entry">
+  <header>
+    <h1 class="p-name">{{ .Title }}</h1>
+  </header>
+
+  <div class="e-content">
+    {{ .Content }}
+
+    {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
+      {{ if gt (len $taxonomy) 0 }}
+        <h2>{{ $taxonomyName | humanize | title }}</h2>
+        <ul>
+          {{ range $termName, $term := $taxonomy.ByCount }}
+            <li>
+              <a href="{{ $term.Page.Permalink }}">
+                {{ $termName | humanize | title }}
+              </a>
+              ({{ $term.Count }})
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    {{ end }}
+  </div>
+</article>
+{{ end }}
