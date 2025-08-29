@@ -1,5 +1,5 @@
 ---
-title: "Tesauro del Contenido"
+title: "# Tesauro"
 date: 2023-10-27
 layout: "tesauro-list" # ¡Importante! Usaremos esta plantilla personalizada
 menu: "main"
