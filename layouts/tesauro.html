@@ -1,0 +1,33 @@
+{{ define "main" }}
+<main class="main">
+  <div class="content">
+    <h1>{{ .Title }}</h1>
+    <hr>
+    <p>
+      Encuentra aquí un índice completo del contenido de nuestro sitio, organizado por categorías y etiquetas.
+    </p>
+
+    <h2>Categorías</h2>
+    <ul class="taxonomy-list">
+      {{ range .Site.Taxonomies.categoria.ByCount }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Term }}</a>
+        <span class="term-count">({{ .Count }})</span>
+      </li>
+      {{ end }}
+    </ul>
+
+    ---
+
+    <h2>Etiquetas</h2>
+    <ul class="taxonomy-list">
+      {{ range .Site.Taxonomies.tag.ByCount }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Term }}</a>
+        <span class="term-count">({{ .Count }})</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</main>
+{{ end }}
