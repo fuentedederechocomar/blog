@@ -14,7 +14,7 @@
           {{ range $termName, $term := $taxonomy.ByCount }}
             <li>
               <a href="{{ $term.Page.Permalink }}">
-                {{ $termName | humanize | title }}
+                {{ $term.Page.Title }}
               </a>
               ({{ $term.Count }})
             </li>
