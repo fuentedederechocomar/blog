@@ -1,18 +1,18 @@
 {{ define "main" }}
 <article class="h-entry">
+  <style>
+    .h-entry {
+      padding-left: 3.5rem; /* Ajusta este valor para mover todo a la derecha */
+    }
+    .e-content ul {
+      margin-left: 2.5rem; /* Opcional: Sangría adicional para las listas */
+    }
+  </style>
   <header>
     <h1 class="p-name">{{ .Title }}</h1>
   </header>
 
   <div class="e-content">
-    <style>
-      .e-content {
-        padding-left: 3.5rem; /* Ajusta este valor para mover todo a la derecha */
-      }
-      .e-content ul {
-        margin-left: 3.5rem; /* Opcional: Ajusta para más sangría en las listas */
-      }
-    </style>
     {{ .Content }}
 
     {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
@@ -32,4 +32,4 @@
     {{ end }}
   </div>
 </article>
-{{ end }} 
+{{ end }}
